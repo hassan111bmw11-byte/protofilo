@@ -1,9 +1,9 @@
 
 export default function Projects() {
   const projects = [
-    { title: "Project Mangment", desc: "full stack project management build with menn" },
-    { title: "News app", desc: "responsive web app with search and categoryes build with next.js + newsApi" },
-    { title: "Portfolio Website", desc: "Next.js + Tailwind" },
+    { title: "Project Mangment", desc: "full stack project management build with menn" ,link:"https://task-managment-saas.vercel.app/"  },
+    { title: "News app", desc: "responsive web app with search and categoryes build with next.js + newsApi",link: "https://nextjs-news-app.vercel.app/" },
+    { title: "Portfolio Website", desc: "Next.js + Tailwind", link:"https://protofilo-hazel-gamma.vercel.app/" },
   ];
 
   return (
@@ -14,7 +14,7 @@ export default function Projects() {
           <div key={i} className="flex flex-col gap-2 p-5 justify-center w-90 h-40 rounded bg-linear-to-b from-gray-800 to-gray-900 shadow">
             <h3 className="font-bold">{p.title}</h3>
             <p className="text-gray-500">{p.desc}</p>
-            <button className="bg-linear-to-b from-blue-900 to-blue-950 w-fit text-white py-2 px-4 rounded hover:bg-linear-to-b hover:from-blue-600 hover:to-blue-500 transition duration-900">View project</button>
+            <a href={p.link} className="bg-linear-to-b from-blue-900 to-blue-950 w-fit text-white py-2 px-4 rounded hover:bg-linear-to-b hover:from-blue-600 hover:to-blue-500 transition duration-900">View project</a>
           </div>
         ))}
       </div>
