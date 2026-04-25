@@ -3,7 +3,7 @@ export default function Projects() {
   const projects = [
     { title: "Project Mangment", desc: "full stack project management build with menn" ,link:"https://task-managment-saas.vercel.app/"  },
     { title: "News app", desc: "responsive web app with search and categoryes build with next.js + newsApi",link: "https://nextjs-news-app.vercel.app/" },
-    { title: "Portfolio Website", desc: "my personal made with Next.js + Tailwind + Vercel", link:"https://protofilo-hazel-gamma.vercel.app/" },
+    { title: "Pdf translater", desc: "web app to translate pdfs build with Next.js + Tailwind + node.js + GroqApi + Vercel", link:"https://pdfapp-puce.vercel.app/" },
   ];
 
   return (
