@@ -4,7 +4,10 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   return (
-    <section id="contact" className="p-10 mr-25 w-100 bg-gray-900 mt-10 rounded snap-start">
+    <section
+      id="contact"
+      className="p-10 mr-25 w-100 bg-gray-900 mt-10 rounded snap-start"
+    >
       <h2 className="text-2xl font-bold mb-6">Contact</h2>
       <div className="flex flex-col gap-3 max-w-md">
         <input

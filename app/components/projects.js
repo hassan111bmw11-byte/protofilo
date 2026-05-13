@@ -1,20 +1,52 @@
-
 export default function Projects() {
   const projects = [
-    { title: "Project Mangment", desc: "full stack project management build with menn" ,link:"https://task-managment-saas.vercel.app/"  },
-    { title: "News app", desc: "responsive web app with search and categoryes build with next.js + newsApi",link: "https://nextjs-news-app.vercel.app/" },
-    { title: "Pdf translater", desc: "web app to translate pdfs build with Next.js + Tailwind + node.js + GroqApi + Vercel", link:"https://pdfapp-puce.vercel.app/" },
+    {
+      title: "bookly-احجزلي",
+      desc: "full stack booking app build with next.js + Supabase + Tailwind",
+      link: "https://booking-app-six-bice.vercel.app/",
+    },
+    {
+      title: "Project Mangment",
+      desc: "full stack project management build with menn",
+      link: "https://task-managment-saas.vercel.app/",
+    },
+    {
+      title: "News app",
+      desc: "responsive web app with search and categoryes build with next.js + newsApi",
+      link: "https://nextjs-news-app.vercel.app/",
+    },
   ];
 
   return (
-    <section id="projects" className="p-10 border-b flex h-screen justify-center items-center flex-col border-gray-600 snap-start">
-      <h2 className="text-2xl font-bold mb-6">Projects</h2>
-      <div className="grid md:grid-cols-3 gap-4 items-center justify-center ">
+    <section
+      id="projects"
+      className="py-40 px-8  md:px-20 min-h-screen bg-gray-950 snap-start"
+    >
+      <h2 className="text-3xl font-bold mb-12 text-center text-white">
+        Featured Projects
+      </h2>
+      <div className="grid md:grid-cols-3 gap-8">
         {projects.map((p, i) => (
-          <div key={i} className="flex flex-col gap-2 p-5 justify-center w-90 h-40 rounded bg-linear-to-b from-gray-800 to-gray-900 shadow">
-            <h3 className="font-bold">{p.title}</h3>
-            <p className="text-gray-500">{p.desc}</p>
-            <a href={p.link} className="bg-linear-to-b from-blue-900 to-blue-950 w-fit text-white py-2 px-4 rounded hover:bg-linear-to-b hover:from-blue-600 hover:to-blue-500 transition duration-900">View project</a>
+          <div
+            key={i}
+            className="group flex flex-col gap-4 p-6 rounded-xl bg-gray-900 border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/10"
+          >
+            <h3 className="text-xl font-bold text-white">{p.title}</h3>
+            <p className="text-zinc-400 leading-relaxed grow">{p.desc}</p>
+            <div className="flex gap-4">
+              <a
+                href={p.link}
+                className="text-blue-500 border border-blue-500 px-10 py-1 hover:bg-blue-600 hover:text-white rounded-md font-medium inline-flex items-center gap-2"
+              >
+                live demo →
+              </a>
+              <a
+                href={p.link}
+                className="text-blue-500 border border-blue-500 px-2 py-1 hover:bg-blue-600 hover:text-white rounded-md font-medium  inline-flex items-center gap-2"
+              >
+                github repo →
+              </a>
+            </div>
           </div>
         ))}
       </div>
